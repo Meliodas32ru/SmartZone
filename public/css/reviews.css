@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #13181e;
+    color: #000000;
+}
+main {
+    padding: 20px;
+    background-color: #333;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Стили для отзывов */
+#reviews {
+    margin-top: 20px;
+}
+section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color:#f9f9f9
+}
+.review {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.review h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.review p {
+    margin: 5px 0;
+}
+
+.review small {
+    color: #777;
+    font-size: 0.9em;
+}

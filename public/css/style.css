@@ -1,8 +1,52 @@
-/* Общие стили для всех страниц */
-body {
-    font-family: Arial, sans-serif;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
     margin: 0;
     padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+menu, ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote::before, blockquote::after,
+q::before, q::after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+button {
+    border: none;
+}
+/* Общие стили для всех страниц */
+body {
     background-color:#13181e;
     color: #ffffff;
 }
@@ -58,11 +102,6 @@ section {
     margin-bottom: 20px;
 }
 
-section h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
 footer {
     background-color: #333;
     color: #fff;
@@ -78,9 +117,9 @@ footer p {
 }
 
 /* Стили для страницы каталога */
-#catalog {
-    display: flex;
-    flex-wrap: wrap;
+.catalog__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -109,25 +148,16 @@ section p {
     line-height: 1.6;
 }
 
-/* Стили для главной страницы */
-section p {
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-
-.product-card button {
+.product-card__button {
+    width: 100%;
     background-color: #4CAF50; /* Зеленый цвет */
     color: white; /* Цвет текста */
-    border: none; /* Без рамки */
     padding: 10px 20px; /* Внутренние отступы */
     text-align: center; /* Выравнивание текста */
-    text-decoration: none; /* Без подчеркивания */
-    display: inline-block; /* Отображение в виде блока */
     font-size: 16px; /* Размер шрифта */
-    margin: 10px 0; /* Отступы сверху и снизу */
-    cursor: pointer; /* П cursor при наведении */
     border-radius: 5px; /* Закругленные углы */
     transition: background-color 0.3s; /* Анимация перехода фона */
+    margin-top: auto;
 }
 
 /* Изменение цвета при наведении */
@@ -137,33 +167,18 @@ section p {
 
 
 .product-card {
-    margin: 10px; /* Отступы вокруг карточки товара */
     border: 1px solid #ddd; /* Рамка вокруг товара */
     border-radius: 5px; /* Закругленные углы карточки */
     padding: 15px; /* Внутренние отступы */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для эффекта глубины */
     background-color: #fff; /* Фон карточки */
-    width:230px;
-    height:530px;
+    min-height:500px;
+    display: flex;
+    flex-direction: column;
 }
 
 
-#search-input {
-    width: 89%; /* Ширина на всю ширину родительского контейнера */
-    padding: 10px; /* Внутренние отступы */
-    border: 1px solid #ddd; /* Рамка */
-    border-radius: 5px; /* Закругленные углы */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
-    font-size: 16px; /* Размер шрифта */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Плавный переход рамки и тени */
-}
 
-/* Эффект при фокусировке */
-#search-input:focus {
-    border-color: #4CAF50; /* Зеленый цвет рамки при фокусе */
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Тень при фокусе */
-    outline: none; /* Убираем стандартное выделение */
-}
 
 .cart-items-container {
     display: flex;
@@ -182,18 +197,7 @@ section p {
     max-width: 100%; /* Ограничение ширины изображения */
     height: auto; /* Автоматическая высота */
 }
-#clear-cart {
 
-    padding: 10px 20px;
-    background-color: #ff5c5c; /* Красный цвет для кнопки удаления */
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-#clear-cart:hover {
-    background-color: #ff3838; /* Темнее при наведении */
-}
 
 
 .login-container {
