@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - SmartZone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #13181e;
+    color: #000000; 
+}
+    </style> 
+</head>
+
+<body>
+    <header>
+        <h1>SmartZone</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="cart.html">Корзина</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="login.html">Вход</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+        
+            <div class="login-container">
+                <h1>Вход на сайт</h1>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Логин:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button id="login" type="submit">Войти</button>
+                </form>
+                <p>Нет аккаунта? <a href="register.html">Зарегистрируйтесь</a></p>
+            </div>
+        
+    
+    <footer>
+        <p>&copy; 2025 SmartZone. Все права защищены.</p>
+    </footer>
+    <script src="js/login.js"></script> <!-- Подключение JavaScript -->
+</body>
+
+</html>

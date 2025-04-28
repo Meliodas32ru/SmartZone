@@ -1,0 +1,106 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - SmartZone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #13181e;
+    color: #000000; 
+}
+        main {
+    padding: 20px;
+    background-color: #333;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+    .cart-item {
+        border: 1px solid #ccc;
+        padding: 16px;
+        text-align: center;
+        width: 150px;
+        background-color: #ffffff;
+    }
+    section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+section h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+.cart-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#checkout-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#clear-cart {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#checkout-btn:hover {
+    background-color: #218838;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SmartZone</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="cart.html">Корзина</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="login.html">Вход</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <h2>Ваша корзина</h2>
+                <div id="cart">
+                    <div class="cart-items-container">
+                        <!-- Товары будут отображаться здесь -->
+                    </div>
+                    <div id="total-price">
+                        <h3>Итого: <span id="total-amount">0</span> ₽</h3>
+                        <div class="cart-actions">
+                            <button id="clear-cart">Очистить корзину</button>
+                            <button id="checkout-btn">Оформить заказ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 SmartZone. Все права защищены.</p>
+    </footer>
+
+    <script src="js/cart.js"></script> <!-- Подключение скрипта для корзины -->
+</body>
+</html>

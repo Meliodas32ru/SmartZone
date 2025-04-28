@@ -1,0 +1,285 @@
+/* Общие стили для всех страниц */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#13181e;
+    color: #ffffff;
+}
+
+header {
+    background-color: #13181e;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Стили для страницы каталога */
+#catalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#catalog .item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: calc(33.333% - 40px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#catalog .item h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+}
+
+#catalog .item p {
+    margin: 0;
+    color: #666;
+}
+
+/* Стили для страницы контактов */
+section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Стили для главной страницы */
+section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.product-card button {
+    background-color: #4CAF50; /* Зеленый цвет */
+    color: white; /* Цвет текста */
+    border: none; /* Без рамки */
+    padding: 10px 20px; /* Внутренние отступы */
+    text-align: center; /* Выравнивание текста */
+    text-decoration: none; /* Без подчеркивания */
+    display: inline-block; /* Отображение в виде блока */
+    font-size: 16px; /* Размер шрифта */
+    margin: 10px 0; /* Отступы сверху и снизу */
+    cursor: pointer; /* П cursor при наведении */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background-color 0.3s; /* Анимация перехода фона */
+}
+
+/* Изменение цвета при наведении */
+.product-card button:hover {
+    background-color: #45a049; /* Более темный зеленый цвет */
+}
+
+
+.product-card {
+    margin: 10px; /* Отступы вокруг карточки товара */
+    border: 1px solid #ddd; /* Рамка вокруг товара */
+    border-radius: 5px; /* Закругленные углы карточки */
+    padding: 15px; /* Внутренние отступы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для эффекта глубины */
+    background-color: #fff; /* Фон карточки */
+    width:230px;
+    height:530px;
+}
+
+
+#search-input {
+    width: 89%; /* Ширина на всю ширину родительского контейнера */
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid #ddd; /* Рамка */
+    border-radius: 5px; /* Закругленные углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+    font-size: 16px; /* Размер шрифта */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Плавный переход рамки и тени */
+}
+
+/* Эффект при фокусировке */
+#search-input:focus {
+    border-color: #4CAF50; /* Зеленый цвет рамки при фокусе */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Тень при фокусе */
+    outline: none; /* Убираем стандартное выделение */
+}
+
+.cart-items-container {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет переносить элементы на новую строку */
+    gap: 16px; /* Пробел между элементами */
+}
+
+.cart-item {
+    border: 1px solid #ccc; /* Стили для карточки товара */
+    padding: 16px;
+    text-align: center;
+    width: 150px; /* Ширина карточки товара */
+}
+
+.cart-item img {
+    max-width: 100%; /* Ограничение ширины изображения */
+    height: auto; /* Автоматическая высота */
+}
+#clear-cart {
+
+    padding: 10px 20px;
+    background-color: #ff5c5c; /* Красный цвет для кнопки удаления */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#clear-cart:hover {
+    background-color: #ff3838; /* Темнее при наведении */
+}
+
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    position: absolute; /* Абсолютное позиционирование */
+    top: 50%; /* Смещаем вниз на 50% от высоты родителя */
+    left: 50%; /* Смещаем вправо на 50% от ширины родителя */
+    transform: translate(-50%, -50%); /* Сдвигаем обратно на половину своей ширины и высоты */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+
+input[type="text"],
+input[type="password"] {
+    width: 93%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.post-page {
+    padding: 4rem 0;
+}
+
+.post-page article {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.post-page h1 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.post-page .meta {
+    color: #666;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+
+}
+
+.post-page img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 2rem 0;
+}
+
+.post-page h2 {
+    color: #007bff;
+    margin-top: 2rem;
+}

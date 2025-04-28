@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы - SmartZone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #13181e;
+    color: #000000;
+}
+main {
+    padding: 20px;
+    background-color: #333;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Стили для отзывов */
+#reviews {
+    margin-top: 20px;
+}
+section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color:#f9f9f9
+}
+.review {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.review h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.review p {
+    margin: 5px 0;
+}
+
+.review small {
+    color: #777;
+    font-size: 0.9em;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SmartZone</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="cart.html">Корзина</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="login.html">Вход</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Что говорят наши клиенты</h2>
+            <div id="reviews">
+                <!-- Сюда будут добавляться отзывы -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 SmartZone. Все права защищены.</p>
+    </footer>
+    <script>
+        // Функция для загрузки отзывов
+        async function loadReviews() {
+            try {
+                const response = await fetch('http://localhost:3059/api/reviews');
+                if (!response.ok) {
+                    throw new Error('Ошибка при загрузке отзывов');
+                }
+                const reviews = await response.json();
+                displayReviews(reviews);
+            } catch (error) {
+                console.error('Ошибка:', error);
+                document.getElementById('reviews').innerHTML = '<p>Не удалось загрузить отзывы.</p>';
+            }
+        }
+
+        // Функция для отображения отзывов
+        function displayReviews(reviews) {
+            const reviewsContainer = document.getElementById('reviews');
+            reviewsContainer.innerHTML = ''; // Очистка контейнера
+
+            if (reviews.length === 0) {
+                reviewsContainer.innerHTML = '<p>Отзывов пока нет.</p>';
+                return;
+            }
+
+            reviews.forEach(review => {
+                const reviewElement = document.createElement('div');
+                reviewElement.className = 'review';
+                reviewElement.innerHTML = `
+                    <h3>${review.name}</h3>
+                    <p>${review.comment}</p>
+                    <p>Рейтинг: ${'★'.repeat(review.rating)}</p>
+                    <small>${new Date(review.date).toLocaleDateString()}</small>
+                `;
+                reviewsContainer.appendChild(reviewElement);
+            });
+        }
+
+        // Загрузка отзывов при загрузке страницы
+        document.addEventListener('DOMContentLoaded', loadReviews);
+    </script>
+</body>
+</html>
