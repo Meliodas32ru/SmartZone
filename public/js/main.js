@@ -99,10 +99,10 @@ function createProductCard(product) {
     <p>${product.brand}</p>
     <p>Цена: ${product.price.toFixed(2)} руб.</p>
     <p>Цвет: ${product.color}</p>
-    <button class="buy-btn">Добавить в корзину</button>
+    <button class="product-card__button">Добавить в корзину</button>
   `;
 
-  card.querySelector(".buy-btn").addEventListener("click", () => addToCart(product));
+  card.querySelector(".product-card__button").addEventListener("click", () => addToCart(product));
   return card;
 }
 
