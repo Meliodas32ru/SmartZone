@@ -1,84 +1,47 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, menu, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-main, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, main, menu, nav, section {
-    display: block;
-}
 body {
-    line-height: 1;
-}
-menu, ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote::before, blockquote::after,
-q::before, q::after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-button {
-    border: none;
-}
-/* Общие стили для всех страниц */
-body {
-    background-color:#13181e;
+    font-family: Arial, sans-serif;
+    background-color: #111144;
     color: #ffffff;
 }
 
+.main {
+    flex: auto;
+}
+
 .header {
-    background-color: #13181e;
-    color: #fff;
-    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    width: 100%;
+    padding: 20px;
     text-align: center;
+    background-color: #090926;
+    margin-bottom: 40px;
+    box-shadow: 0 22px 30px 0 hsl(256deg 74.9% 27.82%)
 }
 
 .nav {
-    background-color: #000000;
-    padding: 10px;
     text-align: center;
 }
+
 .nav__item {
     display: inline;
     margin-right: 15px;
 }
+
 .nav__link {
     color: #fff;
     font-weight: bold;
 }
 
 .footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #2a2a8c;
     text-align: center;
-    position: fixed;
     width: 100%;
-    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .catalog__list {
@@ -89,13 +52,13 @@ body {
 
 .product-card__button {
     width: 100%;
-    background-color: #4CAF50; /* Зеленый цвет */
-    color: white; /* Цвет текста */
-    padding: 10px 20px; /* Внутренние отступы */
-    text-align: center; /* Выравнивание текста */
-    font-size: 16px; /* Размер шрифта */
-    border-radius: 5px; /* Закругленные углы */
-    transition: background-color 0.3s; /* Анимация перехода фона */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
     margin-top: auto;
 }
 
@@ -104,27 +67,61 @@ body {
 }
 
 .product-card {
-    border: 1px solid #ddd; /* Рамка вокруг товара */
-    border-radius: 5px; /* Закругленные углы карточки */
-    padding: 15px; /* Внутренние отступы */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для эффекта глубины */
-    background-color: #fff; /* Фон карточки */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
     min-height:500px;
     display: flex;
     flex-direction: column;
 }
 
+.btn {
+    padding: 10px 15px;
+    color: white;
+    border-radius: 15px;
+    transition: scale 0.3s;
+}
+
+.btn--theme-primary {
+    background: hsl(240deg 54.15% 49.51%) linear-gradient(180deg, hsl(0deg 0% 0% / 73%) 0%, hsl(240deg 29.2% 28.18% / 41%) 100%) no-repeat;
+    box-shadow: 1px 2px 8px rgb(159 141 193 / 56%);
+}
+
+.btn--theme-primary:hover {
+    scale: 1.06;
+}
+
+.btn--theme-accent {
+    background: #4CAF50;
+}
+
+.btn--theme-accent:hover {
+    scale: 1.06;
+}
+
+.title {
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .login-container {
-    background-color: #fff;
+    background: #2a2a8c;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
-    position: absolute; /* Абсолютное позиционирование */
-    top: 50%; /* Смещаем вниз на 50% от высоты родителя */
-    left: 50%; /* Смещаем вправо на 50% от ширины родителя */
-    transform: translate(-50%, -50%); /* Сдвигаем обратно на половину своей ширины и высоты */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .form-group {
@@ -143,20 +140,20 @@ input[type="password"] {
     margin-left: 10px;
 }
 
-.post-page {
-    padding: 4rem 0;
-}
-
 
 @media (max-width: 768px) {
     .search {
-        flex-direction: column; 
+        flex-direction: column;
         gap: 10px;
     }
-
+/*// todo - избавиться от стилизации по тегам*/
     .search input,
     .search button {
-        width: 100%; 
-        padding: 12px; 
+        width: 100%;
+        padding: 12px;
     }
+}
+
+.footer__text {
+    padding: 30px;
 }

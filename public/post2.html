@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+// TODO: Вынести в стили
 <head>
     <meta charset="UTF-8">
     <title>Сравнение флагманов 2024 года - SmartZone</title>
@@ -36,14 +37,16 @@
 .li{
     color: #000000;
 }
+        /*// todo - избавиться от стилизации по тегам*/
+
 .post-page h2 {
     color: #000000;
     margin-top: 2rem;
 }
 
-/* Добавьте в ваш основной CSS-файл */
+        /*// todo - избавиться от стилизации по тегам*/
 .post-page .content img {
-    
+
     max-width: 45%; /* Ограничивает ширину контейнером */
     height: auto; /* Сохраняет пропорции */
     border-radius: 8px;
@@ -71,6 +74,7 @@
     object-fit: cover;
     border-radius: 4px;
 }
+        /*// todo - избавиться от стилизации по тегам*/
 
 .post-page .content {
     position: relative;
@@ -87,6 +91,7 @@
     border-left: 2px solid #eee;
     box-shadow: -2px 0 5px rgba(0,0,0,0.05);
 }
+        /*// todo - избавиться от стилизации по тегам*/
 
 .sidebar h2 {
     color: #000;
@@ -94,12 +99,14 @@
     padding-bottom: 10px;
     margin-top: 0;
 }
+        /*// todo - избавиться от стилизации по тегам*/
 
 .sidebar ul {
     list-style: none;
     padding: 0;
     margin: 1rem 0;
 }
+        /*// todo - избавиться от стилизации по тегам*/
 
 .sidebar li {
     padding: 8px 0;
@@ -172,7 +179,7 @@
         flex-direction: column;
         gap: 1rem;
     }
-    
+
     .button {
         width: 100%;
         text-align: center;
@@ -181,10 +188,12 @@
 
 /* Адаптивность */
 @media (max-width: 768px) {
+    /*// todo - избавиться от стилизации по тегам*/
+
     .post-page .content {
         padding-right: 0;
     }
-    
+
     .sidebar {
         position: static;
         width: 100%;
@@ -198,21 +207,17 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>SmartZone</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="cart.html">Корзина</a></li>
-                <li><a href="reviews.html">Отзывы</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-                <li><a href="login.html">Вход</a></li>
-            </ul>
-        </nav>
-    </header>
-
-
+    <header class="header">
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__link">SmartZone</a></li>
+            <li class="nav__item"><a href="cart.html" class="nav__link">Корзина</a></li>
+            <li class="nav__item"><a href="reviews.html" class="nav__link">Отзывы</a></li>
+            <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+            <li class="nav__item"><a href="login.html" class="nav__link">Вход</a></li>
+        </ul>
+    </nav>
+</header>
     <main class="post-page">
         <div class="container">
             <article>
@@ -222,7 +227,7 @@
                     <span>Автор: Технический эксперт</span>
                 </div>
                 <div class="content">
-                    <img src="https://www.iguides.ru/upload/iblock/e00/e005c2e5f1f94edfa1340881d0aa74e2.jpg" 
+                    <img src="https://www.iguides.ru/upload/iblock/e00/e005c2e5f1f94edfa1340881d0aa74e2.jpg"
                         alt="Сравнение смартфонов">
                     <h2>Лучшие флагманы 2024</h2>
                     <table class="comparison-table">
@@ -267,9 +272,10 @@
             </div>
         </div>
     </main>
-
-    <footer>
-        <p>&copy; 2025 SmartZone. Все права защищены.</p>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2025 SmartZone. Все права защищены.</p>
+        </div>
     </footer>
 </body>
 </html>

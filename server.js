@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 const app = express();
-const PORT = 3059;
+const PORT = 3069;
 
 mongoose.connect('mongodb://localhost:27017/SmartZone', {
     useNewUrlParser: true,
