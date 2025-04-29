@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartZone - Лучшие смартфоны</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 </head>
 <body class="body">
     <header class="header">
@@ -20,111 +19,101 @@
             </ul>
         </nav>
     </header>
-
-    <!-- Баннер с акцией -->
-    <section class="banner">
-        <div class="slider">
-            <div class="slides" id="slides">
-                <img class="slides__img" src="https://avatars.mds.yandex.net/i?id=7ba2e550b656872d34e46e28be0708fb7bedd50b-12499725-images-thumbs&n=13" alt="Slide 1" class="slider__img">
-                <img class="slides__img" src="https://avatars.mds.yandex.net/i?id=de6fe7e0db78a075bfdf18ab3747b02a19ae18520ed41d34-5255574-images-thumbs&n=13" alt="Slide 2" class="slider__img">
-                <img class="slides__img" src="https://avatars.mds.yandex.net/i?id=de6fe7e0db78a075bfdf18ab3747b02a19ae18520ed41d34-5255574-images-thumbs&n=13" alt="Slide 3" class="slider__img">
-            </div>
-            <button class="btn prev" onclick="moveSlide(-1)">❮</button>
-            <button class="btn next" onclick="moveSlide(1)">❯</button>
-        </div>
-    </section>
-
-    <!-- Хиты продаж -->
-    <section class="catalog">
-        <div class="container">
-            <h2 class="h2">Каталог смартфонов</h2>
-            <div class="sort-filters">
-                <button class="sort-btn" data-sort="default">По умолчанию</button>
-                <button class="sort-btn" data-sort="asc">Цена ↑</button>
-                <button class="sort-btn" data-sort="desc">Цена ↓</button>
-            </div>
-            <div class="search">
-                <div class="brand-filters">
-                    <button class="brand-filter" data-brand="all">Все</button>
-                    <button class="brand-filter" data-brand="Apple">Apple</button>
-                    <button class="brand-filter" data-brand="Samsung">Samsung</button>
-                    <button class="brand-filter" data-brand="Xiaomi">Xiaomi</button>
-                    <button class="brand-filter" data-brand="Huawei">Huawei</button>
+    <main class="main">
+        <section class="banner">
+            <div class="slider">
+                <div class="slides" id="slides">
+                    <img class="slides__img" src="img/samsung.jpg" alt="Slide 1" class="slider__img">
+                    <img class="slides__img" src="https://avatars.mds.yandex.net/i?id=de6fe7e0db78a075bfdf18ab3747b02a19ae18520ed41d34-5255574-images-thumbs&n=13" alt="Slide 2" class="slider__img">
+                    <img class="slides__img" src="https://avatars.mds.yandex.net/i?id=de6fe7e0db78a075bfdf18ab3747b02a19ae18520ed41d34-5255574-images-thumbs&n=13" alt="Slide 3" class="slider__img">
                 </div>
-                <input type="text" id="search-input" class="search__input" placeholder="Поиск по каталогу...">
+                <button class="btn prev" onclick="moveSlide(-1)">❮</button>
+                <button class="btn next" onclick="moveSlide(1)">❯</button>
             </div>
-
-            <div id="catalog" class="catalog__list">
-                <!-- Товары будут загружены сюда динамически -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Гарантии -->
-    <section class="guarantees">
-        <div class="container">
-            <h2 class="guarantees__title">Гарантии</h2>
-            <div class="guarantee-list">
-                <div class="guarantee-item">
-                    <img src="img\img1.png" alt="Доставка" class="guarantee-item__img">
-                    <p class="guarantee-item__text">Бесплатная доставка от 25000 ₽</p>
+        </section>
+        <section class="catalog">
+            <div class="container">
+                <h2 class="catalog__title title">Каталог смартфонов</h2>
+                <div class="sort-filters">
+                    <button class="btn btn--theme-primary sort-btn" data-sort="default">По умолчанию</button>
+                    <button class="btn btn--theme-primary sort-btn" data-sort="asc">Цена ↑</button>
+                    <button class="btn btn--theme-primary sort-btn" data-sort="desc">Цена ↓</button>
                 </div>
-                <div class="guarantee-item">
-                    <img src="img\img3.png" alt="Возврат" class="guarantee-item__img">
-                    <p class="guarantee-item__text">14 дней на возврат</p>
+                <div class="search">
+                    <div class="brand-filters">
+                        <button class="btn btn--theme-primary brand-filter" data-brand="all">Все</button>
+                        <button class="btn btn--theme-primary brand-filter" data-brand="Apple">Apple</button>
+                        <button class="btn btn--theme-primary brand-filter" data-brand="Samsung">Samsung</button>
+                        <button class="btn btn--theme-primary brand-filter" data-brand="Xiaomi">Xiaomi</button>
+                        <button class="btn btn--theme-primary brand-filter" data-brand="Huawei">Huawei</button>
+                    </div>
+                    <input type="text" id="search-input" class="search__input" placeholder="Поиск по каталогу...">
                 </div>
-                <div class="guarantee-item">
-                    <img src="img\img2.png" alt="Работаем круглосуточно" class="guarantee-item__img">
-                    <p class="guarantee-item__text">Работаем круглосуточно</p>
+
+                <div id="catalog" class="catalog__list">
+                    <!-- Товары будут загружены сюда динамически -->
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Блог -->
-    <section class="blog">
-        <div class="container">
-            <h2 class="blog__title">Полезные статьи</h2>
-            <div class="blog-posts">
-                <a href="post1.html" class="post">
-                    <h3 class="post__title">Как выбрать смартфон для игр?</h3>
-                    <p class="post__excerpt">Рекомендации по выбору игрового устройства с учетом характеристик...</p>
-                    <span class="read-more">Читать далее →</span>
-                </a>
-                <a href="post2.html" class="post">
-                    <h3 class="post__title">Сравнение флагманов 2024 года</h3>
-                    <p class="post__excerpt">Обзор и сравнение характеристик последних моделей смартфонов...</p>
-                    <span class="read-more">Читать далее →</span>
-                </a>
-                <a href="post3.html" class="post">
-                    <h3 class="post__title">Как продлить жизнь аккумулятора?</h3>
-                    <p class="post__excerpt">Практические советы по уходу за батареей вашего устройства...</p>
-                    <span class="read-more">Читать далее →</span>
-                </a>
+        </section>
+        <section class="guarantees">
+            <div class="container">
+                <h2 class="guarantees__title title">Гарантии</h2>
+                <div class="guarantee-list">
+                    <div class="guarantee-item">
+                        <img src="img\img1.png" alt="Доставка" class="guarantee-item__img">
+                        <p class="guarantee-item__text">Бесплатная доставка от 25000 ₽</p>
+                    </div>
+                    <div class="guarantee-item">
+                        <img src="img\img3.png" alt="Возврат" class="guarantee-item__img">
+                        <p class="guarantee-item__text">14 дней на возврат</p>
+                    </div>
+                    <div class="guarantee-item">
+                        <img src="img\img2.png" alt="Работаем круглосуточно" class="guarantee-item__img">
+                        <p class="guarantee-item__text">Работаем круглосуточно</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Подписка -->
-    <section class="subscription">
-        <div class="container">
-            <div class="subscribe-line">
-                <h3 class="subscribe-line__title">Подпишитесь на рассылку</h3>
-                <form class="subscribe-form">
-                    <input type="email" class="subscribe-form__input" placeholder="Ваш email" required>
-                    <button type="submit" class="subscribe-form__button">Подписаться</button>
-                </form>
-                <div class="success-message">Вы успешно подписались на рассылку!</div>
+        </section>
+        <section class="blog">
+            <div class="container">
+                <h2 class="blog__title title">Полезные статьи</h2>
+                <div class="blog-posts">
+                    <a href="post1.html" class="post">
+                        <h3 class="post__title">Как выбрать смартфон для игр?</h3>
+                        <p class="post__excerpt">Рекомендации по выбору игрового устройства с учетом характеристик...</p>
+                        <span class="read-more">Читать далее →</span>
+                    </a>
+                    <a href="post2.html" class="post">
+                        <h3 class="post__title">Сравнение флагманов 2024 года</h3>
+                        <p class="post__excerpt">Обзор и сравнение характеристик последних моделей смартфонов...</p>
+                        <span class="read-more">Читать далее →</span>
+                    </a>
+                    <a href="post3.html" class="post">
+                        <h3 class="post__title">Как продлить жизнь аккумулятора?</h3>
+                        <p class="post__excerpt">Практические советы по уходу за батареей вашего устройства...</p>
+                        <span class="read-more">Читать далее →</span>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+        <section class="subscription">
+            <div class="container">
+                <div class="subscribe-line">
+                    <h3 class="subscribe-line__title">Подпишитесь на рассылку</h3>
+                    <form class="subscribe-form">
+                        <input type="email" class="subscribe-form__input" placeholder="Ваш email" required>
+                        <button type="submit" class="btn btn--theme-accent">Подписаться</button>
+                    </form>
+                    <div class="success-message">Вы успешно подписались на рассылку!</div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer class="footer">
         <div class="container">
             <p class="footer__text">&copy; 2025 SmartZone. Все права защищены.</p>
         </div>
     </footer>
-
     <script src="js/main.js"></script>
 </body>
 </html>

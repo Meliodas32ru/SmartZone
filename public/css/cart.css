@@ -1,22 +1,6 @@
-/* Стили для body */
-.body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #13181e;
-    color: #000000;
-}
-
-.main {
-    padding: 20px;
-    background-color: #333;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 .cart__items-container {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     gap: 16px;
     margin-top: 20px;
 }
@@ -26,6 +10,8 @@
 }
 .cart__section {
     margin-top: 20px;
+    padding: 40px;
+    flex: auto;
 }
 
 .cart__title {
@@ -89,36 +75,4 @@
 
 .cart__checkout-btn:hover {
     background-color: #218838;
-}
-
-.nav {
-    text-align: center;
-}
-
-.nav__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.nav__item {
-    display: inline;
-}
-.nav__link {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }

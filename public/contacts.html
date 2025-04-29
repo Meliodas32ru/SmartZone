@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты - SmartZone</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/contacts.css">
     <!-- Подключение API Яндекс Карт -->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_api_ключ&lang=ru_RU" type="text/javascript"></script>
@@ -30,20 +30,19 @@
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="index.html" class="nav__link">SmartZone</a></li>
-                <li class="nav__item"><a href="cart.html" class="nav__link">Корзина</a></li>
-                <li class="nav__item"><a href="reviews.html" class="nav__link">Отзывы</a></li>
-                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
-                <li class="nav__item"><a href="login.html" class="nav__link">Вход</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="contacts">
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__link">SmartZone</a></li>
+            <li class="nav__item"><a href="cart.html" class="nav__link">Корзина</a></li>
+            <li class="nav__item"><a href="reviews.html" class="nav__link">Отзывы</a></li>
+            <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+            <li class="nav__item"><a href="login.html" class="nav__link">Вход</a></li>
+        </ul>
+    </nav>
+</header>
+    <main class="contacts main">
         <section class="contacts__section">
-            <h2 class="contacts__title">Свяжитесь с нами</h2>
+            <h2 class="contacts__title title">Свяжитесь с нами</h2>
             <div class="contacts__info">
                 <p class="contacts__text"><strong>Телефон:</strong> +7 (123) 456-78-90</p>
                 <p class="contacts__text"><strong>Email:</strong> <a href="mailto:info@smartzone.ru" class="contact__link">info@smartzone.ru</a></p>
@@ -52,9 +51,10 @@
             <div id="map" class="contacts__map"></div>
         </section>
     </main>
-
     <footer class="footer">
-        <p>&copy; 2025 SmartZone. Все права защищены.</p>
+        <div class="container">
+            <p class="footer__text">&copy; 2025 SmartZone. Все права защищены.</p>
+        </div>
     </footer>
 </body>
 </html>

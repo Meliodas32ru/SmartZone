@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+// TODO: Вынести в стили
 <head>
     <meta charset="UTF-8">
     <title>Как выбрать смартфон для игр? - SmartZone</title>
@@ -32,13 +33,15 @@
     font-weight: bold;
     color: #000000;
 }
-.li{
+        /*// todo - избавиться от стилизации по тегам*/
+
+li{
     color: #000000;
 }
+        /*// todo - избавиться от стилизации по тегам*/
 
-/* Добавьте в ваш основной CSS-файл */
 .post-page .content img {
-    
+
     max-width: 45%; /* Ограничивает ширину контейнером */
     height: auto; /* Сохраняет пропорции */
     border-radius: 8px;
@@ -166,7 +169,7 @@
         flex-direction: column;
         gap: 1rem;
     }
-    
+
     .button {
         width: 100%;
         text-align: center;
@@ -178,7 +181,7 @@
     .post-page .content {
         padding-right: 0;
     }
-    
+
     .sidebar {
         position: static;
         width: 100%;
@@ -192,20 +195,17 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>SmartZone</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="cart.html">Корзина</a></li>
-                <li><a href="reviews.html">Отзывы</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-                <li><a href="login.html">Вход</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <header class="header">
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__link">SmartZone</a></li>
+            <li class="nav__item"><a href="cart.html" class="nav__link">Корзина</a></li>
+            <li class="nav__item"><a href="reviews.html" class="nav__link">Отзывы</a></li>
+            <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+            <li class="nav__item"><a href="login.html" class="nav__link">Вход</a></li>
+        </ul>
+    </nav>
+</header>
     <main class="post-page">
         <div class="container">
             <article>
@@ -223,7 +223,7 @@
                             <li>Частота обновления экрана: 120 Гц и выше</li>
                             <li>Система охлаждения</li>
                         </ul>
-                
+
                         <h2>Рекомендуемые модели</h2>
                         <ul>
                             <li>Asus ROG Phone 8</li>
@@ -231,8 +231,8 @@
                             <li>Xiaomi Black Shark 6</li>
                         </ul>
                     </div>
-                
-                    <img src="https://novostidnja.ru/wp-content/uploads/2020/01/smartfon-xiaomi-poluchit-rekordnyj-obem-pamjati-2c347ca.jpg" 
+
+                    <img src="https://novostidnja.ru/wp-content/uploads/2020/01/smartfon-xiaomi-poluchit-rekordnyj-obem-pamjati-2c347ca.jpg"
                         alt="Игровой смартфон">
                 </div>
             </article>
@@ -242,9 +242,10 @@
             </div>
         </div>
     </main>
-
-    <footer>
-        <p>&copy; 2025 SmartZone. Все права защищены.</p>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2025 SmartZone. Все права защищены.</p>
+        </div>
     </footer>
 </body>
 </html>

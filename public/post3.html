@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
+// TODO: Вынести в стили
+
 <head>
     <meta charset="UTF-8">
     <title>Как продлить жизнь аккумулятора? - SmartZone</title>
@@ -35,6 +37,8 @@
 .li{
     color: #000000;
 }
+        /*// todo - избавиться от стилизации по тегам*/
+
 .post-page article {
     background: white;
     padding: 2rem;
@@ -45,7 +49,7 @@
 }
 /* Добавьте в ваш основной CSS-файл */
 .post-page .content img {
-    
+
     max-width: 35%; /* Ограничивает ширину контейнером */
     height: auto; /* Сохраняет пропорции */
     border-radius: 8px;
@@ -212,7 +216,7 @@ ol{
     .main-content {
         margin-right: 0;
     }
-    
+
     .sidebar {
         position: static;
         width: 80%;
@@ -228,7 +232,7 @@ ol{
         flex-direction: column;
         gap: 1rem;
     }
-    
+
     .button {
         width: 100%;
         text-align: center;
@@ -254,20 +258,17 @@ ol{
     </style>
 </head>
 <body>
-    <header>
-        <h1>SmartZone</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="cart.html">Корзина</a></li>
-                <li><a href="reviews.html">Отзывы</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-                <li><a href="login.html">Вход</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <header class="header">
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__link">SmartZone</a></li>
+            <li class="nav__item"><a href="cart.html" class="nav__link">Корзина</a></li>
+            <li class="nav__item"><a href="reviews.html" class="nav__link">Отзывы</a></li>
+            <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+            <li class="nav__item"><a href="login.html" class="nav__link">Вход</a></li>
+        </ul>
+    </nav>
+</header>
     <main class="post-page">
         <div class="container">
             <article>
@@ -282,7 +283,7 @@ ol{
                         <img src="https://avatars.mds.yandex.net/i?id=160b968fe6fc03bee75b0a84b83eae45-4276558-images-thumbs&n=13"
                             alt="Зарядка смартфона">
                     </div>
-    
+
                     <!-- Боковая панель -->
                     <div class="sidebar">
                         <h2>10 советов по уходу</h2>
@@ -301,7 +302,7 @@ ol{
                     </div>
                 </div>
             </article>
-    
+
             <!-- Навигационные кнопки -->
             <div class="navigation-buttons">
                 <a href="post2.html" class="button prev">← Предыдущая статья</a>
@@ -309,9 +310,10 @@ ol{
             </div>
         </div>
     </main>
-
-    <footer>
-        <p>&copy; 2025 SmartZone. Все права защищены.</p>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2025 SmartZone. Все права защищены.</p>
+        </div>
     </footer>
 </body>
 </html>
