@@ -1,57 +1,124 @@
-body {
+/* Стили для body */
+.body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #13181e;
-    color: #000000; 
+    color: #000000;
 }
-        main {
+
+.main {
     padding: 20px;
     background-color: #333;
     margin: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-    .cart-item {
-        border: 1px solid #ccc;
-        padding: 16px;
-        text-align: center;
-        width: 150px;
-        background-color: #ffffff;
-    }
-    section h2 {
+.cart__items-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 16px;
+    margin-top: 20px;
+}
+.cart-item__img {
+    width: 100px;
+    height: 100px;
+}
+.cart__section {
+    margin-top: 20px;
+}
+
+.cart__title {
     font-size: 2em;
     margin-bottom: 10px;
     color: #ffffff;
 }
 
-section h3 {
-    font-size: 2em;
+.cart-item {
+    border: 1px solid #ccc;
+    padding: 16px;
+    text-align: center;
+    width: 150px;
+    background-color: #ffffff;
+}
+.cart-item__name {
+    margin-bottom: 30px;
+}
+.cart-item__color {
+    margin-bottom: 30px;
+}
+.cart-item__price {
+    margin-bottom: 30px;
+}
+.cart__total-price {
+    margin-top: 20px;
+}
+
+.cart__total-title {
+    font-size: 1.5em;
     margin-bottom: 10px;
     color: #ffffff;
 }
-.cart-actions {
+
+.cart__total-amount {
+    font-weight: bold;
+}
+
+.cart__actions {
     margin-top: 20px;
     display: flex;
     gap: 10px;
 }
+.cart__checkout-btn,
+.cart__clear-btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-#checkout-btn {
+.cart__checkout-btn {
     background-color: #28a745;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
 }
-#clear-cart {
+
+.cart__clear-btn {
     background-color: #ff5c5c;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
 }
-#checkout-btn:hover {
+
+.cart__checkout-btn:hover {
     background-color: #218838;
+}
+
+.nav {
+    text-align: center;
+}
+
+.nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav__item {
+    display: inline;
+}
+.nav__link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

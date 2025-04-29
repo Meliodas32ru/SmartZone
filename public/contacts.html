@@ -29,33 +29,31 @@
     </script>
 </head>
 <body>
-    <header>
-        <h1>SmartZone</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="cart.html">Корзина</a></li>
-                <li><a href="reviews.html">Отзывы</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-                <li><a href="login.html">Вход</a></li>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">SmartZone</a></li>
+                <li class="nav__item"><a href="cart.html" class="nav__link">Корзина</a></li>
+                <li class="nav__item"><a href="reviews.html" class="nav__link">Отзывы</a></li>
+                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                <li class="nav__item"><a href="login.html" class="nav__link">Вход</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="contact-section">
-            <h2>Свяжитесь с нами</h2>
-            <div class="contact-info">
-                <p><strong>Телефон:</strong> +7 (123) 456-78-90</p>
-                <p><strong>Email:</strong> <a href="mailto:info@smartzone.ru">info@smartzone.ru</a></p>
-                <p><strong>Адрес:</strong> г. Брянск, просп. Ленина, 26 </p>
+    <main class="contacts">
+        <section class="contacts__section">
+            <h2 class="contacts__title">Свяжитесь с нами</h2>
+            <div class="contacts__info">
+                <p class="contacts__text"><strong>Телефон:</strong> +7 (123) 456-78-90</p>
+                <p class="contacts__text"><strong>Email:</strong> <a href="mailto:info@smartzone.ru" class="contact__link">info@smartzone.ru</a></p>
+                <p class="contacts__text"><strong>Адрес:</strong> г. Брянск, просп. Ленина, 26 </p>
             </div>
-            <div id="map"></div>
+            <div id="map" class="contacts__map"></div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>&copy; 2025 SmartZone. Все права защищены.</p>
     </footer>
 </body>
