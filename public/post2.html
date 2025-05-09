@@ -1,281 +1,156 @@
 <!DOCTYPE html>
 <html lang="ru">
-// TODO: Вынести в стили
 <head>
     <meta charset="UTF-8">
-    <title>Сравнение флагманов 2024 года - SmartZone</title>
+    <title>Сравнение флагманов 2025 года - SmartZone</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .comparison-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 2rem 0;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.comparison-table th,
-.comparison-table td {
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid #eee;
-    color:#000000
-}
-
-.comparison-table th {
-    background: #333;
-    color: white;
-}
-
-.comparison-table tr:hover {
-    background: #f8f9fa;
-}
-
-.comparison-table td:first-child {
-    font-weight: bold;
-    color: #000000;
-}
-.li{
-    color: #000000;
-}
-        /*// todo - избавиться от стилизации по тегам*/
-
-.post-page h2 {
-    color: #000000;
-    margin-top: 2rem;
-}
-
-        /*// todo - избавиться от стилизации по тегам*/
-.post-page .content img {
-
-    max-width: 45%; /* Ограничивает ширину контейнером */
-    height: auto; /* Сохраняет пропорции */
-    border-radius: 8px;
-    margin: 2rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Для таблиц в статьях */
-.comparison-table {
-    max-width: 100%;
-    overflow-x: auto;
-}
-
-/* Ограничение ширины контейнера */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Для изображений в карточках товаров */
-.product-card img {
-    width: 100%;
-    height: 200px; /* Фиксированная высота */
-    object-fit: cover;
-    border-radius: 4px;
-}
-        /*// todo - избавиться от стилизации по тегам*/
-
-.post-page .content {
-    position: relative;
-    padding-right: 280px; /* Ширина правого блока */
-}
-
-.sidebar {
-    position: absolute;
-    top: -125px;
-    right: 70px;
-    width: 250px;
-    padding: 20px;
-    background: white;
-    border-left: 2px solid #eee;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.05);
-}
-        /*// todo - избавиться от стилизации по тегам*/
-
-.sidebar h2 {
-    color: #000;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-    margin-top: 0;
-}
-        /*// todo - избавиться от стилизации по тегам*/
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-}
-        /*// todo - избавиться от стилизации по тегам*/
-
-.sidebar li {
-    padding: 8px 0;
-    color: #333;
-}
-
-.navigation-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 3rem;
-    padding: 0 20px;
-    width: 1000px;
-}
-
-.button {
-    padding: 12px 24px;
-    background: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background 0.3s;
-    font-weight: bold;
-}
-
-.button:hover {
-    background: #0056b3;
-}
-
-.prev {
-    background: #6c757d;
-}
-
-.prev:hover {
-    background: #5a6268;
-}
-
-.next {
-    background: #28a745;
-}
-
-.next:hover {
-    background: #218838;
-}
-/* Добавьте иконки */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
-
-.button.prev::before {
-    content: "← ";
-    margin-right: 5px;
-}
-
-.button.next::after {
-    content: " →";
-    margin-left: 5px;
-}
-
-/* Анимация появления */
-.navigation-buttons {
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.post-page:hover .navigation-buttons {
-    opacity: 1;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-    .navigation-buttons {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .button {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-    /*// todo - избавиться от стилизации по тегам*/
-
-    .post-page .content {
-        padding-right: 0;
-    }
-
-    .sidebar {
-        position: static;
-        width: 100%;
-        margin-top: 2rem;
-        border-left: none;
-        border-top: 2px solid #eee;
-        padding: 20px 0;
-    }
-}
-
-    </style>
+    <link rel="stylesheet" href="css/post2.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
 </head>
 <body>
     <header class="header">
-    <nav class="nav">
-        <ul class="nav__list">
-            <li class="nav__item"><a href="index.html" class="nav__link">SmartZone</a></li>
-            <li class="nav__item"><a href="cart.html" class="nav__link">Корзина</a></li>
-            <li class="nav__item"><a href="reviews.html" class="nav__link">Отзывы</a></li>
-            <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
-            <li class="nav__item"><a href="login.html" class="nav__link">Вход</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">SmartZone</a></li>
+                <li class="nav__item"><a href="cart.html" class="nav__link">Корзина</a></li>
+                <li class="nav__item"><a href="reviews.html" class="nav__link">Отзывы</a></li>
+                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                <li class="nav__item"><a href="login.html" class="nav__link">Вход</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main class="post-page">
         <div class="container">
-            <article>
-                <h1>Сравнение флагманов 2025 года</h1>
-                <div class="meta">
-                    <span>Опубликовано: 10.02.2025</span>
-                    <span>Автор: Технический эксперт</span>
+            <article class="article">
+                <h1 class="article__title">Сравнение топовых флагманов 2025 года</h1>
+                
+                <div class="article__meta">
+                    <span class="meta__date">Опубликовано: 10.02.2025</span>
+                    <span class="meta__author">Автор: Технический эксперт SmartZone</span>
                 </div>
-                <div class="content">
-                    <img src="https://www.iguides.ru/upload/iblock/e00/e005c2e5f1f94edfa1340881d0aa74e2.jpg"
-                        alt="Сравнение смартфонов">
-                    <h2>Лучшие флагманы 2024</h2>
-                    <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th>Модель</th>
-                                <th>Процессор</th>
-                                <th>Камера</th>
-                                <th>Аккумулятор</th>
-                                <th>Цена</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>iPhone 16 Pro Max</td>
-                                <td>A18 Bionic</td>
-                                <td>48 МП + 12 МП + 12 МП</td>
-                                <td>4500 мАч</td>
-                                <td>99 990 ₽</td>
-                            </tr>
-                            <tr>
-                                <td>Samsung S24 Ultra</td>
-                                <td>Snapdragon 8 Gen 3</td>
-                                <td>200 МП + 12 МП + 10 МП</td>
-                                <td>5000 мАч</td>
-                                <td>89 990 ₽</td>
-                            </tr>
-                            <tr>
-                                <td>Xiaomi 14 Pro</td>
-                                <td>Snapdragon 8 Gen 3</td>
-                                <td>50 МП + 50 МП + 50 МП</td>
-                                <td>4800 мАч</td>
-                                <td>69 990 ₽</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                
+                <img src="https://www.iguides.ru/upload/iblock/e00/e005c2e5f1f94edfa1340881d0aa74e2.jpg" 
+                    alt="Топовые смартфоны 2025 года" class="article__image">
+                
+                <div class="article__content">
+                    <p>2025 год принес нам новые технологические прорывы в мире смартфонов. В этом обзоре мы сравним три главных флагмана года, которые борются за звание лучшего смартфона на рынке.</p>
+                    
+                    <h2 class="content__subtitle">Технические характеристики</h2>
+                    
+                    <div class="table-container">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Характеристика</th>
+                                    <th>iPhone 16 Pro Max</th>
+                                    <th>Samsung Galaxy S24 Ultra</th>
+                                    <th>Xiaomi 14 Pro</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Процессор</td>
+                                    <td>Apple A18 Pro (3 нм)</td>
+                                    <td>Snapdragon 8 Gen 4 (3 нм)</td>
+                                    <td>Snapdragon 8 Gen 4 (3 нм)</td>
+                                </tr>
+                                <tr>
+                                    <td>Дисплей</td>
+                                    <td>6.7" LTPO OLED, 120Hz</td>
+                                    <td>6.8" Dynamic AMOLED 2X, 144Hz</td>
+                                    <td>6.73" AMOLED, 120Hz</td>
+                                </tr>
+                                <tr>
+                                    <td>Основная камера</td>
+                                    <td>48 МП + 12 МП + 12 МП + LiDAR</td>
+                                    <td>200 МП + 50 МП + 12 МП + 10 МП</td>
+                                    <td>50 МП (1") + 50 МП + 50 МП</td>
+                                </tr>
+                                <tr>
+                                    <td>Аккумулятор</td>
+                                    <td>4500 мАч</td>
+                                    <td>5000 мАч</td>
+                                    <td>4800 мАч</td>
+                                </tr>
+                                <tr>
+                                    <td>Зарядка</td>
+                                    <td>27W (проводная), 15W (беспроводная)</td>
+                                    <td>45W (проводная), 15W (беспроводная)</td>
+                                    <td>120W (проводная), 50W (беспроводная)</td>
+                                </tr>
+                                <tr>
+                                    <td>Цена</td>
+                                    <td>129 990 ₽</td>
+                                    <td>119 990 ₽</td>
+                                    <td>89 990 ₽</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h2 class="content__subtitle">Ключевые отличия</h2>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <h3>iPhone 16 Pro Max</h3>
+                            <ul>
+                                <li>Лучшая оптимизация iOS</li>
+                                <li>Новый датчик LiDAR для AR</li>
+                                <li>Титановый корпус</li>
+                                <li>Самый мощный процессор</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="feature">
+                            <h3>Samsung S24 Ultra</h3>
+                            <ul>
+                                <li>200 МП основная камера</li>
+                                <li>Встроенный S-Pen</li>
+                                <li>Экран с частотой 144 Гц</li>
+                                <li>Лучшая защита от воды</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="feature">
+                            <h3>Xiaomi 14 Pro</h3>
+                            <ul>
+                                <li>Сверхбыстрая зарядка 120W</li>
+                                <li>1-дюймовый сенсор камеры</li>
+                                <li>Лучшее соотношение цены и качества</li>
+                                <li>Гибридный зум 10x</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h2 class="content__subtitle">Кому какой смартфон подойдет?</h2>
+                    
+                    <div class="recommendations">
+                        <p><strong>Выбирайте iPhone 16 Pro Max</strong>, если цените премиальное качество, долгую поддержку обновлений и экосистему Apple.</p>
+                        
+                        <p><strong>Samsung S24 Ultra</strong> - лучший выбор для тех, кому важны максимальные возможности камеры и стилус для работы.</p>
+                        
+                        <p><strong>Xiaomi 14 Pro</strong> подойдет тем, кто хочет флагманские характеристики по более доступной цене с инновационными функциями.</p>
+                    </div>
                 </div>
             </article>
-            <div class="navigation-buttons">
+            
+            <div class="article-navigation">
                 <a href="post1.html" class="button prev">← Предыдущая статья</a>
                 <a href="post3.html" class="button next">Следующая статья →</a>
             </div>
         </div>
     </main>
+
     <footer class="footer">
         <div class="container">
             <p class="footer__text">&copy; 2025 SmartZone. Все права защищены.</p>
         </div>
     </footer>
+    <script src="js/common.js"></script>
 </body>
 </html>

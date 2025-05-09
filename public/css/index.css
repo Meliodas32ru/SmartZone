@@ -1,16 +1,28 @@
-
-
 .banner {
     background-size: cover;
     text-align: center;
     width: 100%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
 }
 
 .catalog__title {
     font-size: 2em;
     margin-bottom: 20px;
     color: #ffffff;
+}
+
+.catalog__container {
+    display: flex;
+    gap: 30px;
+}
+
+.products__not {
+    margin: 50px auto;
+    font-size: 20px;
+    align-items: center;
+    grid-column: 1 / -1;
 }
 
 .cta {
@@ -58,7 +70,8 @@
 .sort-filters {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 34px;
+    align-items: end;
 }
 
 .products {
@@ -78,24 +91,21 @@
 .product-card h3 {
     font-size: 18px;
     margin: 15px 0;
-    color: #333;
+    color: #ffffff;
 }
 
 .product-card p {
     font-size: 16px;
-    color: #333;
+    color: #ffffff;
     font-weight: 600;
     margin-bottom: 15px;
-}
-
-.search {
-display: flex;
 }
 
 .container {
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 20px;
+    margin-bottom: 15px;
 }
 
 .guarantees {
@@ -222,6 +232,7 @@ display: flex;
     background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%23666' viewBox='0 0 24 24'><path d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zM7 13l-2-1.33V14h2v-1.33zm10 0v1.33h2v-1.33H17z'/></svg>")
     no-repeat 10px center;
     background-size: 20px;
+    margin-top: 20px;
 }
 
 .success-message {
@@ -239,7 +250,6 @@ display: flex;
     z-index: 1000;
 }
 
-
 .category-card {
     text-align: center;
     text-decoration: none;
@@ -248,21 +258,18 @@ display: flex;
     transition: transform 0.3s ease;
 }
 
-
 .category-name {
     margin-top: 10px;
     font-size: 1rem;
     font-weight: bold;
 }
 
-
 .slider {
     position: relative;
-    width: 100%;
     max-width: 1500px;
-    margin: 30px auto;
+    margin: 10px auto;
     overflow: hidden;
-    border-radius: 10px;
+    box-shadow: 0 0 77px hsl(0deg 0% 0%);
 }
 
 .slides {
@@ -273,13 +280,102 @@ display: flex;
 .slides__img{
     width: 100%;
     height: auto;
+    object-fit: contain;
 }
-
 
 .prev { left: 10px; }
 .next { right: 10px; }
 
+.price-filter {
+    border-radius: 26px;
+    align-items: end;
+    padding: 7px 30px;
+    margin-bottom: 20px;
+    width: 500px;
+    box-shadow: 1px 2px 8px rgb(159 141 193 / 20%);
+}
+.price-filter__header {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+}
 
+.price-filter__container {
+    display: flex;
+    align-items: center;
+}
+
+.price-filter__action {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.price-range {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.price-range__inputs {
+    display: flex;
+    gap: 10px;
+}
+.price-range__input {
+    width: 100px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.price-slider {
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    position: relative;
+    margin: 20px 0;
+}
+.price-slider__track {
+    height: 100%;
+    position: absolute;
+    background: hsl(240deg 54.15% 49.51%);
+}
+.price-slider__thumb {
+    width: 18px;
+    height: 18px;
+    background: hsl(240deg 54.15% 49.51%);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.success-message {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    animation: slideIn 0.5s ease;
+    z-index: 1000;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
 @keyframes slide {
     0%   { transform: translateX(0%); }
     33%  { transform: translateX(-100%); }

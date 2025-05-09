@@ -1,0 +1,158 @@
+.option{
+    background-color: #2a2a8c;
+}
+
+.checkout-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+.checkout__title{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.checkout-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background: #2a2a8c;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border 0.3s;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Блок с информацией о заказе */
+.order-summary {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    background: #2a2a8c;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+
+#order-items {
+    margin-bottom: 20px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+}
+
+
+/* Кнопка подтверждения */
+.btn-submit {
+    grid-column: 1;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+.login-success-message {
+    background-color: hsl(120deg 54.15% 36.55% / 61%);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+/* Стили для блока с предложением входа */
+.account-prompt {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.1em;
+}
+
+.login-link {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+    border-bottom: 1px dashed hsl(240deg 54.15% 70.51%);
+    padding-bottom: 2px;
+}
+
+.login-link:hover {
+    color: hsl(240deg 54.15% 80.51%);
+    border-bottom-color: hsl(240deg 54.15% 80.51%);
+}
+
+/* Убираем стили для старого блока оплаты */
+.payment__method, .option {
+    display: none;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .checkout-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .order-summary {
+        grid-column: 1;
+        grid-row: auto;
+    }
+    
+    .btn-submit {
+        grid-column: 1;
+    }
+    
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav__item {
+        margin: 5px 0;
+    }
+}

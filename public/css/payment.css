@@ -1,0 +1,119 @@
+/* Основные стили контейнера оплаты */
+.payment-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: hsl(240deg 53.85% 36.55% / 61%);
+    border-radius: 20px;
+    border: 1px solid hsl(240deg 54.15% 49.51%);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    color: #ffffff;
+}
+
+.payment-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2em;
+    color: #ffffff;
+}
+
+.payment-info {
+    padding: 1.5rem;
+    background: hsl(240deg 53.85% 36.55% / 30%);
+    border-radius: 15px;
+}
+
+.payment-info p {
+    font-size: 1.1em;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.payment-info span {
+    font-weight: bold;
+}
+
+/* Стили для методов оплаты */
+#payment-methods {
+    margin: 2rem 0;
+}
+
+#payment-methods h3 {
+    margin-bottom: 1.2rem;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: hsl(240deg 53.85% 36.55% / 40%);
+    border: 1px solid hsl(240deg 54.15% 49.51%);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payment-method:hover {
+    background: hsl(240deg 53.85% 36.55% / 60%);
+}
+
+.payment-method.selected {
+    background: hsl(240deg 54.15% 49.51%);
+    border-color: #ffffff;
+}
+
+.payment-method img {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+    object-fit: contain;
+}
+
+.payment-method span {
+    font-size: 1em;
+}
+
+/* Стили для уведомления */
+.payment-notice {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: hsl(240deg 53.85% 36.55% / 30%);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.95em;
+}
+
+/* Стили для кнопки оплаты */
+.btn-pay {
+    width: 100%;
+    padding: 15px;
+    background: hsl(240deg 54.15% 49.51%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.btn-pay:hover {
+    background: hsl(240deg 54.15% 55.51%);
+}
+
+.btn-pay:active {
+    transform: scale(0.98);
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .payment-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}

@@ -1,0 +1,142 @@
+.user-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: hsl(240deg 53.85% 36.55% / 61%);
+    border-radius: 20px;
+    border: 1px solid hsl(240deg 54.15% 49.51%);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    color: #ffffff;
+}
+
+.user-tabs {
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid hsl(240deg 54.15% 49.51%);
+    padding-bottom: 1rem;
+}
+
+.tab-btn {
+    padding: 0.8rem 1.5rem;
+    margin-right: 1rem;
+    background: hsl(240deg 53.85% 36.55% / 40%);
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1em;
+}
+
+.tab-btn:hover {
+    background: hsl(240deg 53.85% 36.55% / 60%);
+}
+
+.tab-btn.active {
+    background: hsl(240deg 54.15% 49.51%);
+}
+
+.logout-btn {
+    margin-left: auto;
+    padding: 0.8rem 1.5rem;
+    background: hsl(0deg 54.15% 49.51%);
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.logout-btn:hover {
+    background: hsl(0deg 54.15% 55.51%);
+}
+
+.tab-content {
+    display: none;
+    padding: 1rem;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+#profile-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn-save {
+    font-size: 1em;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-save:hover {
+    background: hsl(120deg 54.15% 42.55%);
+}
+
+.order-card {
+    background: hsl(240deg 53.85% 36.55% / 40%);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid hsl(240deg 54.15% 49.51%);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed hsl(240deg 54.15% 49.51%);
+}
+
+.order-items {
+    margin: 1rem 0;
+}
+
+.order-item {
+    display: flex;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid hsl(240deg 53.85% 36.55% / 20%);
+}
+
+.order-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 1rem;
+    border-radius: 5px;
+}
+
+.order-item-info {
+    flex-grow: 1;
+}
+
+.order-total {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 1rem;
+    font-size: 1.1em;
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+}
+
+.form-message {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 5px;
+}
+
+.success-message {
+    background: hsl(120deg 54.15% 36.55% / 40%);
+}
+
+.error-message {
+    background: hsl(0deg 54.15% 49.51% / 40%);
+}

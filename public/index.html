@@ -6,6 +6,10 @@
     <title>SmartZone - Лучшие смартфоны</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
 </head>
 <body class="body">
     <header class="header">
@@ -24,31 +28,61 @@
             <div class="slider">
                 <div class="slides" id="slides">
                     <img class="slides__img" src="img/samsung.jpg" alt="Slide 1" class="slider__img">
-                    <img class="slides__img" src="https://avatars.mds.yandex.net/i?id=de6fe7e0db78a075bfdf18ab3747b02a19ae18520ed41d34-5255574-images-thumbs&n=13" alt="Slide 2" class="slider__img">
-                    <img class="slides__img" src="https://avatars.mds.yandex.net/i?id=de6fe7e0db78a075bfdf18ab3747b02a19ae18520ed41d34-5255574-images-thumbs&n=13" alt="Slide 3" class="slider__img">
+                    <img class="slides__img" src="img/iphone.jpg" alt="Slide 2" class="slider__img">
+                    <img class="slides__img" src="img/xiomi.jpg" alt="Slide 3" class="slider__img">
+                    <img class="slides__img" src="img/huawei.jpg" alt="Slide 3" class="slider__img">
                 </div>
-                <button class="btn prev" onclick="moveSlide(-1)">❮</button>
-                <button class="btn next" onclick="moveSlide(1)">❯</button>
             </div>
+            <div class="slides__arrow">
+                <button class="btn btn--theme-primary prev" onclick="moveSlide(-1)">❮</button>
+                <button class="btn btn--theme-primary next" onclick="moveSlide(1)">❯</button>
+            </div>
+
         </section>
         <section class="catalog">
             <div class="container">
                 <h2 class="catalog__title title">Каталог смартфонов</h2>
-                <div class="sort-filters">
-                    <button class="btn btn--theme-primary sort-btn" data-sort="default">По умолчанию</button>
-                    <button class="btn btn--theme-primary sort-btn" data-sort="asc">Цена ↑</button>
-                    <button class="btn btn--theme-primary sort-btn" data-sort="desc">Цена ↓</button>
-                </div>
-                <div class="search">
-                    <div class="brand-filters">
-                        <button class="btn btn--theme-primary brand-filter" data-brand="all">Все</button>
-                        <button class="btn btn--theme-primary brand-filter" data-brand="Apple">Apple</button>
-                        <button class="btn btn--theme-primary brand-filter" data-brand="Samsung">Samsung</button>
-                        <button class="btn btn--theme-primary brand-filter" data-brand="Xiaomi">Xiaomi</button>
-                        <button class="btn btn--theme-primary brand-filter" data-brand="Huawei">Huawei</button>
+                <div class="catalog__container">
+                    <div>
+                        <div class="sort-filters">
+                            <button class="btn btn--theme-primary sort-btn" data-sort="default">По умолчанию</button>
+                            <button class="btn btn--theme-primary sort-btn" data-sort="asc">Цена ↑</button>
+                            <button class="btn btn--theme-primary sort-btn" data-sort="desc">Цена ↓</button>
+                        </div>
+                       
+                        <div class="search">
+                            <div class="brand-filters">
+                                <button class="btn btn--theme-primary brand-filter" data-brand="all">Все</button>
+                                <button class="btn btn--theme-primary brand-filter" data-brand="Apple">Apple</button>
+                                <button class="btn btn--theme-primary brand-filter" data-brand="Samsung">Samsung</button>
+                                <button class="btn btn--theme-primary brand-filter" data-brand="Xiaomi">Xiaomi</button>
+                                <button class="btn btn--theme-primary brand-filter" data-brand="Huawei">Huawei</button>
+                            </div>
+                        </div>
                     </div>
-                    <input type="text" id="search-input" class="search__input" placeholder="Поиск по каталогу...">
+                    <div class="price-filter">
+                        <div class="price-filter__container">
+                            <p class="price-filter__header">Фильтр по цене</p>
+                            <div class="price-range">
+                                <div class="price-range__inputs">
+                                    <input type="number" class="price-range__input" id="price-min" placeholder="От" min="0">
+                                    <span>-</span>
+                                    <input type="number" class="price-range__input" id="price-max" placeholder="До" min="0">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="price-filter__action">
+                            <div class="price-slider">
+                                <div class="price-slider__track" id="price-track"></div>
+                                <div class="price-slider__thumb" id="price-thumb-min"></div>
+                                <div class="price-slider__thumb" id="price-thumb-max"></div>
+                            </div>
+                                <button class="btn btn--theme-primary price-filter__apply" id="apply-price-filter">Применить</button>
+                        </div>
+                    </div>
                 </div>
+                <input type="text" id="search-input" class="search__input" placeholder="Поиск по каталогу...">
 
                 <div id="catalog" class="catalog__list">
                     <!-- Товары будут загружены сюда динамически -->
@@ -115,5 +149,6 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/common.js"></script>
 </body>
 </html>

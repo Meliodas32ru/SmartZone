@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа - SmartZone</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">SmartZone</a></li>
+                <li class="nav__item"><a href="cart.html" class="nav__link">Корзина</a></li>
+                <li class="nav__item"><a href="reviews.html" class="nav__link">Отзывы</a></li>
+                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                <li class="nav__item"><a href="login.html" class="nav__link">Вход</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="checkout-container">
+            <h1 class="checkout__title">Оформление заказа</h1>
+        
+        <form id="checkout-form" class="checkout-form">
+
+            <div class="form-group account-prompt">
+                <p>Есть учетная запись? <a href="login.html?returnUrl=checkout.html" class="login-link">Войти</a></p>
+            </div>
+
+            <div class="form-group">
+                <label for="name">ФИО:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Адрес доставки:</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+            
+            
+            <div class="order-summary">
+                <h3>Ваш заказ</h3>
+                <div id="order-items"></div>
+                <div class="total-amount">
+                    Итого: <span id="order-total">0</span> ₽
+                </div>
+            </div>
+            
+            <button type="submit" class="btn-submit btn--theme-primary">Подтвердить заказ</button>
+        </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2025 SmartZone. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/checkout.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

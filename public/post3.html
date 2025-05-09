@@ -1,319 +1,112 @@
 <!DOCTYPE html>
 <html lang="ru">
-// TODO: Вынести в стили
-
 <head>
     <meta charset="UTF-8">
     <title>Как продлить жизнь аккумулятора? - SmartZone</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .comparison-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 2rem 0;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.comparison-table th,
-.comparison-table td {
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid #eee;
-}
-
-.comparison-table th {
-    background: #007bff;
-    color: white;
-}
-
-.comparison-table tr:hover {
-    background: #f8f9fa;
-}
-
-.comparison-table td:first-child {
-    font-weight: bold;
-    color: #000000;
-}
-.li{
-    color: #000000;
-}
-        /*// todo - избавиться от стилизации по тегам*/
-
-.post-page article {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 1200px;
-    right: 600px;
-}
-/* Добавьте в ваш основной CSS-файл */
-.post-page .content img {
-
-    max-width: 35%; /* Ограничивает ширину контейнером */
-    height: auto; /* Сохраняет пропорции */
-    border-radius: 8px;
-    margin: 2rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Для таблиц в статьях */
-.comparison-table {
-    max-width: 100%;
-    overflow-x: auto;
-}
-
-/* Ограничение ширины контейнера */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Для изображений в карточках товаров */
-.product-card img {
-    width: 100%;
-    height: 200px; /* Фиксированная высота */
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.post-page .content {
-    position: relative;
-    padding-right: 280px; /* Ширина правого блока */
-}
-
-.sidebar h2 {
-    color: #000;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-    margin-top: 0;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-}
-
-.sidebar li {
-    padding: 8px 0;
-    color: #333;
-}
-
-.navigation-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 3rem;
-    padding: 0 20px;
-    width: 1000px;
-}
-
-.button {
-    padding: 12px 24px;
-    background: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background 0.3s;
-    font-weight: bold;
-}
-
-.button:hover {
-    background: #0056b3;
-}
-
-.prev {
-    background: #6c757d;
-}
-
-.prev:hover {
-    background: #5a6268;
-}
-
-.next {
-    background: #28a745;
-}
-
-.next:hover {
-    background: #218838;
-}
-/* Добавьте иконки */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
-
-.button.prev::before {
-    content: "← ";
-    margin-right: 5px;
-}
-
-.button.next::after {
-    content: " →";
-    margin-left: 5px;
-}
-
-/* Анимация появления */
-.navigation-buttons {
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.post-page:hover .navigation-buttons {
-    opacity: 1;
-}
-.post-page h2 {
-    color: #000000;
-    margin-top: 2rem;
-}
-ol{
-    color: #000000;
-}
-/* Контейнер с основным контентом и боковой панелью */
-.content-wrapper {
-    position: relative;
-    margin-top: 2rem;
-}
-
-.main-content {
-    margin-right: 320px; /* Ширина боковой панели + отступ */
-}
-
-.main-content img {
-    width: 60%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.sidebar {
-    position: absolute;
-    top: -210px;
-    right: 30px;
-    width: 300px;
-    padding: 20px;
-    background: white;
-}
-
-.sidebar h2 {
-    color: #000;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-    margin-top: 0;
-}
-
-.sidebar ol {
-    list-style: decimal;
-    padding-left: 20px;
-    margin: 1rem 0;
-}
-
-.sidebar li {
-    margin-bottom: 8px;
-    color: #333;
-}
-
-/* Адаптивность */
-@media (max-width: 1024px) {
-    .main-content {
-        margin-right: 0;
-    }
-
-    .sidebar {
-        position: static;
-        width: 80%;
-        margin-top: 2rem;
-        border-left: none;
-        border-top: 2px solid #eee;
-        padding: 20px 0;
-    }
-}
-/* Адаптивность */
-@media (max-width: 768px) {
-    .navigation-buttons {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .button {
-        width: 100%;
-        text-align: center;
-    }
-}
-/* Добавьте иконки для списка */
-.sidebar li::before {
-    content: "🔋";
-    margin-right: 8px;
-    color: #007bff;
-}
-
-/* Анимация появления */
-.sidebar {
-    transition: transform 0.3s ease;
-    transform: translateY(0);
-}
-
-.post-page:hover .sidebar {
-    transform: translateY(-5px);
-}
-
-    </style>
+    <link rel="stylesheet" href="css/post3.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
 </head>
 <body>
     <header class="header">
-    <nav class="nav">
-        <ul class="nav__list">
-            <li class="nav__item"><a href="index.html" class="nav__link">SmartZone</a></li>
-            <li class="nav__item"><a href="cart.html" class="nav__link">Корзина</a></li>
-            <li class="nav__item"><a href="reviews.html" class="nav__link">Отзывы</a></li>
-            <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
-            <li class="nav__item"><a href="login.html" class="nav__link">Вход</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">SmartZone</a></li>
+                <li class="nav__item"><a href="cart.html" class="nav__link">Корзина</a></li>
+                <li class="nav__item"><a href="reviews.html" class="nav__link">Отзывы</a></li>
+                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                <li class="nav__item"><a href="login.html" class="nav__link nav__link--active">Вход</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main class="post-page">
         <div class="container">
-            <article>
-                    <h1>Как продлить жизнь аккумулятора?</h1>
-                    <div class="meta">
-                        <span>Опубликовано: 25.09.2024</span>
-                        <span>Автор: Специалист по аккумуляторам</span>
+            <article class="article">
+                <h1 class="article__title">Как продлить жизнь аккумулятора смартфона в 2025 году</h1>
+                
+                <div class="article__meta">
+                    <span class="meta__date">Опубликовано: 25.09.2024</span>
+                    <span class="meta__author">Автор: Технический эксперт SmartZone</span>
+                </div>
+                
+                <img src="img\post3.jpg" 
+                    alt="Советы по зарядке смартфона" class="article__image">
+                
+                <div class="article__content">
+                    <p>Современные литий-ионные аккумуляторы требуют правильного обращения. Мы собрали научно обоснованные рекомендации, которые помогут сохранить емкость батареи вашего устройства на долгие годы.</p>
+                    
+                    <h2 class="content__subtitle">Основные правила зарядки</h2>
+                    
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <h3>Идеальный диапазон заряда</h3>
+                            <p>Поддерживайте заряд между 20% и 80%. Полные циклы (0-100%) сокращают срок службы батареи.</p>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <h3>Температурный режим</h3>
+                            <p>Не заряжайте при температуре ниже 0°C или выше 35°C. Идеально - комнатная температура (20-25°C).</p>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <h3>Выбор зарядного устройства</h3>
+                            <p>Используйте только оригинальные или сертифицированные ЗУ. Дешевые аналоги могут повредить контроллер заряда.</p>
+                        </div>
                     </div>
-                <div class="content-wrapper">
-                    <!-- Основной контент -->
-                    <div class="main-content">
-                        <img src="https://avatars.mds.yandex.net/i?id=160b968fe6fc03bee75b0a84b83eae45-4276558-images-thumbs&n=13"
-                            alt="Зарядка смартфона">
+                    
+                    <h2 class="content__subtitle">10 научных советов по продлению жизни АКБ</h2>
+                    
+                    <ol class="tips-list">
+                        <li><strong>Избегайте быстрой зарядки</strong> при ежедневном использовании - она сильнее нагревает батарею</li>
+                        <li><strong>Снимайте чехол</strong> при зарядке для лучшего теплоотвода</li>
+                        <li><strong>Отключайте GPS и Bluetooth</strong>, когда они не нужны</li>
+                        <li><strong>Используйте темную тему</strong> на OLED-экранах (экономит до 30% энергии)</li>
+                        <li><strong>Калибруйте батарею</strong> раз в 3 месяца (полный цикл 0-100%)</li>
+                        <li><strong>Обновляйте ПО</strong> - разработчики оптимизируют энергопотребление</li>
+                        <li><strong>Не оставляйте на зарядке</strong> на всю ночь (используйте умные розетки)</li>
+                        <li><strong>Храните с 50% заряда</strong> при длительном неиспользовании</li>
+                        <li><strong>Заряжайте чаще</strong> короткими сеансами вместо полных циклов</li>
+                        <li><strong>Контролируйте температуру</strong> - перегрев главный враг АКБ</li>
+                    </ol>
+                    
+                    <h2 class="content__subtitle">Мифы об аккумуляторах</h2>
+                    
+                    <div class="myths">
+                        <div class="myth">
+                            <h3>❌ "Нужно полностью разряжать перед зарядкой"</h3>
+                            <p>Это вредно для современных Li-ion аккумуляторов. Лучше подзаряжать при каждом удобном случае.</p>
+                        </div>
+                        
+                        <div class="myth">
+                            <h3>❌ "Зарядка ночью портит батарею"</h3>
+                            <p>Современные смартфоны автоматически прекращают заряд при 100%, но лучше не оставлять их на зарядке долго.</p>
+                        </div>
                     </div>
-
-                    <!-- Боковая панель -->
-                    <div class="sidebar">
-                        <h2>10 советов по уходу</h2>
-                        <ol>
-                            <li>Избегайте полной разрядки (не ниже 20%)</li>
-                            <li>Не оставляйте на солнце</li>
-                            <li>Используйте оригинальные зарядные устройства</li>
-                            <li>Включайте режим энергосбережения</li>
-                            <li>Обновляйте ПО регулярно</li>
-                            <li>Удаляйте ненужные приложения</li>
-                            <li>Отключайте беспроводные модули при неиспользовании</li>
-                            <li>Используйте темную тему (для OLED-экранов)</li>
-                            <li>Калибруйте батарею раз в 3 месяца</li>
-                            <li>Храните при 50% заряда в долгих перерывах</li>
-                        </ol>
+                    
+                    <div class="expert-comment">
+                        <p>"При правильном уходе аккумулятор может сохранить 80% емкости после 3 лет использования. Главное - избегать экстремальных температур и глубоких разрядов."</p>
+                        <p class="expert-name">— Михаил Петров, инженер по аккумуляторным системам</p>
                     </div>
                 </div>
             </article>
-
-            <!-- Навигационные кнопки -->
-            <div class="navigation-buttons">
+            
+            <div class="article-navigation">
                 <a href="post2.html" class="button prev">← Предыдущая статья</a>
                 <a href="index.html" class="button next">Вернуться на главную →</a>
             </div>
         </div>
     </main>
+
     <footer class="footer">
         <div class="container">
             <p class="footer__text">&copy; 2025 SmartZone. Все права защищены.</p>
         </div>
     </footer>
+    <script src="js/common.js"></script>
 </body>
 </html>
