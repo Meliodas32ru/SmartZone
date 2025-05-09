@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата заказа - SmartZone</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">SmartZone</a></li>
+                <li class="nav__item"><a href="cart.html" class="nav__link">Корзина</a></li>
+                <li class="nav__item"><a href="reviews.html" class="nav__link">Отзывы</a></li>
+                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                <li class="nav__item"><a href="login.html" class="nav__link">Вход</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="payment-container">
+            <h1>Оплата заказа</h1>
+        
+            <div class="payment-info">
+                <p>Номер заказа: <span id="order-id"></span></p>
+                <p>Сумма к оплате: <span id="payment-amount"></span> ₽</p>
+                
+                <div id="payment-methods">
+                    <h3>Выберите способ оплаты:</h3>
+                    <div class="payment-method selected" data-method="card">
+                        <img src="/images/card.png" alt="Банковская карта">
+                        <span>Банковская карта</span>
+                    </div>
+                    <div class="payment-method" data-method="sbp">
+                        <img src="/images/sbp.png" alt="СБП">
+                        <span>Система быстрых платежей</span>
+                    </div>
+                    <div class="payment-method" data-method="qiwi">
+                        <img src="/images/qiwi.png" alt="QIWI">
+                        <span>QIWI Кошелек</span>
+                    </div>
+                </div>
+                
+                <div class="payment-notice">
+                    <p>После нажатия кнопки "Подтвердить оплату" вы будете перенаправлены в платежную систему</p>
+                </div>
+                
+                <button id="pay-now-btn" class="btn-pay">Подтвердить оплату</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2025 SmartZone. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/payment.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

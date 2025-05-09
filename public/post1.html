@@ -1,251 +1,107 @@
 <!DOCTYPE html>
 <html lang="ru">
-// TODO: Вынести в стили
 <head>
     <meta charset="UTF-8">
     <title>Как выбрать смартфон для игр? - SmartZone</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .comparison-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 2rem 0;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.comparison-table th,
-.comparison-table td {
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid #eee;
-}
-
-.comparison-table th {
-    background: #007bff;
-    color: white;
-}
-
-.comparison-table tr:hover {
-    background: #f8f9fa;
-}
-
-.comparison-table td:first-child {
-    font-weight: bold;
-    color: #000000;
-}
-        /*// todo - избавиться от стилизации по тегам*/
-
-li{
-    color: #000000;
-}
-        /*// todo - избавиться от стилизации по тегам*/
-
-.post-page .content img {
-
-    max-width: 45%; /* Ограничивает ширину контейнером */
-    height: auto; /* Сохраняет пропорции */
-    border-radius: 8px;
-    margin: 2rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Для таблиц в статьях */
-.comparison-table {
-    max-width: 100%;
-    overflow-x: auto;
-}
-
-/* Ограничение ширины контейнера */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Для изображений в карточках товаров */
-.product-card img {
-    width: 100%;
-    height: 200px; /* Фиксированная высота */
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.post-page .content {
-    position: relative;
-    padding-right: 280px; /* Ширина правого блока */
-}
-
-.sidebar {
-    position: absolute;
-    top: -174px;
-    right: 70px;
-    width: 250px;
-    padding: 20px;
-    background: white;
-
-}
-
-.sidebar h2 {
-    color: #000;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-    margin-top: 0;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-}
-
-.sidebar li {
-    padding: 8px 0;
-    color: #333;
-}
-
-.navigation-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 3rem;
-    padding: 0 20px;
-    width: 1000px;
-}
-
-.button {
-    padding: 12px 24px;
-    background: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background 0.3s;
-    font-weight: bold;
-}
-
-.button:hover {
-    background: #0056b3;
-}
-
-.prev {
-    background: #6c757d;
-}
-
-.prev:hover {
-    background: #5a6268;
-}
-
-.next {
-    background: #28a745;
-}
-
-.next:hover {
-    background: #218838;
-}
-/* Добавьте иконки */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
-
-.button.prev::before {
-    content: "← ";
-    margin-right: 5px;
-}
-
-.button.next::after {
-    content: " →";
-    margin-left: 5px;
-}
-
-/* Анимация появления */
-.navigation-buttons {
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.post-page:hover .navigation-buttons {
-    opacity: 1;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-    .navigation-buttons {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .button {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-    .post-page .content {
-        padding-right: 0;
-    }
-
-    .sidebar {
-        position: static;
-        width: 100%;
-        margin-top: 2rem;
-        border-left: none;
-        border-top: 2px solid #eee;
-        padding: 20px 0;
-    }
-}
-
-    </style>
+    <link rel="stylesheet" href="css/post1.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
 </head>
 <body>
     <header class="header">
-    <nav class="nav">
-        <ul class="nav__list">
-            <li class="nav__item"><a href="index.html" class="nav__link">SmartZone</a></li>
-            <li class="nav__item"><a href="cart.html" class="nav__link">Корзина</a></li>
-            <li class="nav__item"><a href="reviews.html" class="nav__link">Отзывы</a></li>
-            <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
-            <li class="nav__item"><a href="login.html" class="nav__link">Вход</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">SmartZone</a></li>
+                <li class="nav__item"><a href="cart.html" class="nav__link">Корзина</a></li>
+                <li class="nav__item"><a href="reviews.html" class="nav__link">Отзывы</a></li>
+                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                <li class="nav__item"><a href="login.html" class="nav__link nav__link--active">Вход</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main class="post-page">
         <div class="container">
             <article>
-                <h1>Как выбрать смартфон для игр?</h1>
+                <h1 class="article__title">Как выбрать смартфон для игр в 2025 году</h1>
                 <div class="meta">
                     <span>Опубликовано: 10.03.2025</span>
                     <span>Автор: Команда SmartZone</span>
                 </div>
-                <div class="content">
-                    <div class="sidebar">
-                        <h2>Ключевые характеристики</h2>
-                        <ul>
-                            <li>Процессор: Snapdragon 8 Gen 3 или аналогичный</li>
-                            <li>ОЗУ: минимум 8 ГБ</li>
-                            <li>Частота обновления экрана: 120 Гц и выше</li>
-                            <li>Система охлаждения</li>
-                        </ul>
+                
+                <img src="img\post1.jpg" 
+                    alt="Игровой смартфон" class="post-image">
 
-                        <h2>Рекомендуемые модели</h2>
-                        <ul>
-                            <li>Asus ROG Phone 8</li>
-                            <li>Red Magic 9 Pro</li>
-                            <li>Xiaomi Black Shark 6</li>
-                        </ul>
+                <div class="article-content">
+                    <p>Выбор смартфона для игр - ответственная задача, ведь современные мобильные игры требуют мощного железа. Расскажем, на какие параметры обратить внимание.</p>
+
+                    <h2>1. Процессор - сердце игрового смартфона</h2>
+                    <p>Для комфортной игры в 2025 году выбирайте флагманские чипсеты:</p>
+                    <ul>
+                        <li><strong>Qualcomm Snapdragon 8 Gen 3</strong> - лучшая производительность</li>
+                        <li><strong>MediaTek Dimensity 9300</strong> - отличное соотношение цены и мощности</li>
+                        <li><strong>Apple A17 Pro</strong> - для iPhone 15 Pro и новее</li>
+                    </ul>
+
+                    <h2>2. Оперативная память и охлаждение</h2>
+                    <p>Минимум для игр в 2025:</p>
+                    <ul>
+                        <li><strong>8 ГБ ОЗУ</strong> - минимальный комфортный уровень</li>
+                        <li><strong>12 ГБ и более</strong> - для самых требовательных игр</li>
+                        <li><strong>Система охлаждения</strong> - жидкостное или паровое</li>
+                    </ul>
+
+                    <h2>3. Дисплей - важнейший элемент</h2>
+                    <p>Ключевые параметры экрана:</p>
+                    <ul>
+                        <li><strong>120 Гц и выше</strong> - плавность анимации</li>
+                        <li><strong>AMOLED/OLED</strong> - глубокий черный цвет</li>
+                        <li><strong>Яркость 1000 нит</strong> - для игры на улице</li>
+                    </ul>
+
+                    <h2>4. Топ-3 игровых смартфона 2025</h2>
+                    <div class="phones-grid">
+                        <div class="phone-card">
+                            <h3>Asus ROG Phone 8</h3>
+                            <p>Лучшая производительность, 165 Гц экран, боковые сенсоры</p>
+                        </div>
+                        <div class="phone-card">
+                            <h3>Red Magic 9 Pro</h3>
+                            <p>Встроенный вентилятор, 2000 нит яркости</p>
+                        </div>
+                        <div class="phone-card">
+                            <h3>Xiaomi Black Shark 6</h3>
+                            <p>Лучшее соотношение цены и качества</p>
+                        </div>
                     </div>
 
-                    <img src="https://novostidnja.ru/wp-content/uploads/2020/01/smartfon-xiaomi-poluchit-rekordnyj-obem-pamjati-2c347ca.jpg"
-                        alt="Игровой смартфон">
+                    <h2>5. Дополнительные функции</h2>
+                    <p>Что еще может пригодиться геймеру:</p>
+                    <ul>
+                        <li>Физические триггеры (кнопки на корпусе)</li>
+                        <li>Аккумулятор 5000 мАч и более</li>
+                        <li>Быстрая зарядка 65W+</li>
+                        <li>Стереодинамики</li>
+                    </ul>
                 </div>
             </article>
-            <div class="navigation-buttons">
+
+            <div class="article-navigation">
                 <a href="index.html" class="button prev">← На главную</a>
                 <a href="post2.html" class="button next">Следующая статья →</a>
             </div>
         </div>
     </main>
+
     <footer class="footer">
         <div class="container">
             <p class="footer__text">&copy; 2025 SmartZone. Все права защищены.</p>
         </div>
     </footer>
+    <script src="js/common.js"></script>
 </body>
 </html>

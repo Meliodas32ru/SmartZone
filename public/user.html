@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет | SmartZone</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/user.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">SmartZone</a></li>
+                <li class="nav__item"><a href="cart.html" class="nav__link">Корзина</a></li>
+                <li class="nav__item"><a href="reviews.html" class="nav__link">Отзывы</a></li>
+                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                <li class="nav__item"><a href="user.html" class="nav__link nav__link--active">Личный кабинет</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main user">
+        <div class="user-container">
+            <div class="user-tabs">
+                <button class="tab-btn active" data-tab="profile">Профиль</button>
+                <button class="tab-btn" data-tab="orders">Мои заказы</button>
+                <button class="logout-btn">Выйти</button>
+            </div>
+            
+            <div class="tab-content active" id="profile-tab">
+                <form id="profile-form">
+                    <div class="form-group">
+                        <label for="profile-name">Имя:</label>
+                        <input type="text" id="profile-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-email">Email:</label>
+                        <input type="email" id="profile-email" name="email" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-password">Новый пароль (оставьте пустым, если не хотите менять):</label>
+                        <input type="password" id="profile-password" name="password">
+                    </div>
+                    <button type="submit" class="btn-save btn btn--theme-accent ">Сохранить изменения</button>
+                    <div id="profile-message" class="form-message"></div>
+                </form>
+            </div>
+            
+            <div class="tab-content" id="orders-tab">
+                <div id="orders-list">
+                    <p class="loading">Загрузка заказов...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2025 SmartZone. Все права защищены.</p>
+        </div>
+    </footer>
+    <script src="js/common.js"></script>
+    <script src="js/user.js"></script>
+</body>
+</html>

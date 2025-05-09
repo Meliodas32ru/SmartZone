@@ -1,0 +1,12 @@
+.form-group__title {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.login__text {
+    text-decoration: underline;
+}
+
+.login__text:hover {
+    text-decoration: none;
+}

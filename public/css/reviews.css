@@ -1,38 +1,155 @@
-.reviews__section {
-    margin-top: 20px;
-}
-.reviews__title {
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #f9f9f9;
+/* === Форма отзыва === */
+.review-form-container {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background: #2a2a8c;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.review-form-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+/* Специфичный стиль для поля "Ваше имя" */
+.form-input-name {
+    background-color: #f8f9fa; /* светлый фон */
+    border: 1px solid #ced4da;
+    color: #495057;
+    font-family: 'Arial', sans-serif;
+}
+
+.form-input-name:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+.form-textarea {
+    background-color: #f8f9fa;
+    min-height: 120px;
+    resize: vertical;
+    color: #495057;
+}
+
+/* === Рейтинг === */
+/* Рейтинг */
+.rating-stars {
+    display: flex;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.star {
+    color: #ccc;
+    cursor: pointer;
+    padding: 0 2px;
+    transition: color 0.2s;
+}
+
+.star.active {
+    color: #ffc107;
+}
+
+/* === Кнопка отправки === */
+.form-submit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 185px;
+}
+
+.form-submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* === Список отзывов === */
 .reviews__list {
-    margin-top: 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .review {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    background: #2a2a8c;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .review__name {
     margin: 0 0 10px;
-    font-size: 1.2em;
-}
-
-.review__comment {
-    margin: 5px 0;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
 .review__rating {
-    margin: 5px 0;
+    color: #ffc107;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.review__comment {
+    color: #ffffff;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
 .review__date {
-    color: #777;
-    font-size: 0.9em;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* === Сообщения об успехе/ошибке === */
+.message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    border-radius: 4px;
+    z-index: 1000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.message.success {
+    background: #4caf50;
+    color: white;
+}
+
+.message.error {
+    background: #f44336;
+    color: white;
 }
